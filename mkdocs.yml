@@ -45,7 +45,6 @@ nav:
       - 2.Windowsの設定: "jetformer/設定/02.win.md"
     - 各種Tips:
       - 1.Tips: "jetformer/各種Tips/01.tips.md"
-      - 2.接続トラブル: "jetformer/各種Tips/02.wificonectionhadling.md"
 
 
 extra_css:
