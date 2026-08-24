@@ -8,6 +8,10 @@ body {
     .md-content {
       margin-left: 0;
     }
+    /* PDFではYouTube埋め込み(JS変換前のプレースホルダ画像)を非表示にする */
+    img[alt="YOUTUBE"] {
+        display: none;
+    }
 }
 .copy-button {
     background-color: #333; /* 背景色を黒に近いグレーに設定 */
