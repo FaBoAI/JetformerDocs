@@ -59,3 +59,10 @@ extra_javascript:
   - javascripts/extra.js
 plugins:
   - macros
+  - with-pdf:
+      author: FaBo
+      cover_title: FaBo JetFormer Docs
+      cover_subtitle: JetFormer ドキュメント
+      toc_title: 目次
+      output_path: pdf/jetformer-docs.pdf
+      enabled_if_env: ENABLE_PDF_EXPORT

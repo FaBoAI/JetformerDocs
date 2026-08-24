@@ -12,6 +12,12 @@
 
 JetRacer Docsは、FaBo JetRacerの学習用ドキュメントです。
 
+## PDF版
+
+本ドキュメント全体をまとめたPDFをダウンロードできます。
+
+- [jetformer-docs.pdf](/pdf/jetformer-docs.pdf)
+
 ## サポート Discord
 
 JetRacerに関するお問い合わせ、ご質問、トラブルなど
