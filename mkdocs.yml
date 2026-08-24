@@ -1,0 +1,63 @@
+site_name: FaBo JetFormer Docs
+theme:
+    name: material
+    custom_dir: 'theme'
+    language: 'ja'
+    palette:
+      primary: 'green'
+      accent: 'black'
+    logo: 'logo.png'
+    favicon: 'favicon.png'
+extra:
+    search:
+        language: 'jp'
+markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: true
+      noclasses: false
+      pygments_style: monokai
+      linenums: true
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.keys
+  - attr_list
+nav:
+  - Home: "index.md"
+  - 1.はじめに: "00.はじめに/start.md"
+  - JetRacer:
+    - 基本編: 
+      - 1.GettingStarted: "quick/01.intro.md"
+    - 項目別:
+      - 1.使用するNotebook: "04.学習/01.notebooks.md"
+      - 2.PWMの設定: "04.学習/02.pwm.md"
+      - 3.走行録画: "04.学習/09.recordCamera.md"
+      - 4.画像カット: "04.学習/03.filecut.md"
+      - 5.アノテーションと学習: "04.学習/03.interactive_regression.md"
+      - 6.TensorRTへの変換: "04.学習/04.optimize_model.md"
+      - 7.自動走行: "04.学習/05.run.md"
+      - 8.クラウドによる学習: "04.学習/08.googleColab.md"
+      - 9.受信機信号計測: "04.学習/10.transmitterSignal.md"
+      - 10.検証動画作成: "04.学習/11.makeMovie.md"
+      - 11.アノテーション: "04.学習/07.remark.md"
+      - 12.環境情報判断: "04.学習/12.EnvironmentalJudgment.md"
+    - 設定:
+      - 1.Wi-Fiの設定: "sd_new/03.wifi.md"
+      - 2.パッケージの作成: "sd_new/04.jetcard.md"
+      - 3.NXへの対応: "sd_new/05.nx.md"
+    - 各種Tips:
+      - 1.Tips: "tips/01.tips.md"
+      - 2.接続トラブル: "tips/02.wificonectionhadling.md"
+
+
+extra_css:
+#  - "https://fonts.googleapis.com/earlyaccess/notosansjp.css"
+#  - "https://fonts.googleapis.com/css?family=Open+Sans:600,800"
+  - "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+#  - "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css"
+  - "css/version-select.css"
+  - "css/custom.css"
+extra_javascript:
+  - javascripts/version-select.js
+  - javascripts/extra.js
+plugins:
+  - macros
