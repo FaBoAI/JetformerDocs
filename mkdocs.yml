@@ -41,9 +41,8 @@ nav:
       - 11.アノテーション: "jetformer/各項目/07.remark.md"
       - 12.環境情報判断: "jetformer/各項目/12.EnvironmentalJudgment.md"
     - 設定:
-      - 1.Wi-Fiの設定: "jetformer/設定/03.wifi.md"
-      - 2.パッケージの作成: "jetformer/設定/04.jetcard.md"
-      - 3.NXへの対応: "jetformer/設定/05.nx.md"
+      - 1.Wi-Fiの設定: "jetformer/設定/01.wifi.md"
+      - 2.Windowsの設定: "jetformer/設定/02.win.md"
     - 各種Tips:
       - 1.Tips: "jetformer/各種Tips/01.tips.md"
       - 2.接続トラブル: "jetformer/各種Tips/02.wificonectionhadling.md"
