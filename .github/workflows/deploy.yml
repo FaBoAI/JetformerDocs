@@ -17,11 +17,18 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install fonts for PDF (Japanese)
-        run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk libpango-1.0-0 libpangoft2-1.0-0
+      - name: Install fonts for PDF (Japanese) and qpdf
+        run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk libpango-1.0-0 libpangoft2-1.0-0 qpdf
       # weasyprint 63+ has a pagination bug that truncates this document after a few
       # articles (and can hang); 62.3 renders all pages correctly.
       - run: pip install mkdocs-material mkdocs-macros-plugin mkdocs-with-pdf "weasyprint==62.3" "pydyf==0.10.0"
-      - run: mkdocs gh-deploy --force
+      - run: mkdocs build
         env:
           ENABLE_PDF_EXPORT: 1
+      # weasyprint's PDF structure is rejected by some strict viewers (e.g. Acrobat);
+      # rewriting with qpdf produces a standard structure every viewer accepts.
+      - name: Normalize PDF for viewer compatibility
+        run: |
+          qpdf --linearize site/pdf/jetformer-docs.pdf site/pdf/jetformer-docs.tmp.pdf
+          mv site/pdf/jetformer-docs.tmp.pdf site/pdf/jetformer-docs.pdf
+      - run: ghp-import --no-jekyll --push --force --branch gh-pages site

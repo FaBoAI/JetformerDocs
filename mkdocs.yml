@@ -1,4 +1,5 @@
 site_name: FaBo JetFormer Docs
+copyright: "© FaBo"
 theme:
     name: material
     custom_dir: 'theme'
